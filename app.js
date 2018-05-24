@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
+    Campground = require('./models/campground');
 
 
 mongoose.connect('mongodb://localhost/yelp_camp');
@@ -13,14 +14,7 @@ app.get('/', function(req, res) {
   res.render('landing');
 });
 
-//schema setup
-var campgroundSchema = new mongoose.Schema({
-  name: String,
-  image: String,
-  description: String
-});
 
-var Campground = mongoose.model('Campground', campgroundSchema);
 
 /* Campground.create({
   
@@ -62,7 +56,6 @@ app.get('/campgrounds', function(req, res) {
 
 //CREATE - add a new campground
 app.post('/campgrounds', function (req, res) {
-  console.log(res);
   var name = req.body.name;
   var image = req.body.image;
   var desc = req.body.description;
