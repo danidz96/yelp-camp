@@ -14,7 +14,7 @@ var campgroundRoutes = require('./routes/campgrounds'),
     commentRoutes = require('./routes/comment'),
     indexRoutes = require('./routes/index');
 
-seedDB();
+/* seedDB(); */ //Seed the database
 mongoose.connect('mongodb://localhost/yelp_camp');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
