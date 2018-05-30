@@ -8,14 +8,14 @@
 }
 
 @media screen and (min-width: 990px) {
-    .card-img-top {
+    .show {
         max-height: 139px;
         object-fit: cover;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .card-img-top {
+    .show {
         max-height: 169px;
         object-fit: cover;
     }
