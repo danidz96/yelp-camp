@@ -1,7 +1,22 @@
 .delete-form {
     display: inline;
 }
+
 #map {
     height: 400px;
     width: 100%
+}
+
+@media screen and (min-width: 990px) {
+    .card-img-top {
+        max-height: 190px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1190px) {
+    .card-img-top {
+        max-height: 230px;
+        object-fit: cover;
+    }
 }
