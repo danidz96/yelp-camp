@@ -18,9 +18,9 @@ var campgroundRoutes = require('./routes/campgrounds'),
     indexRoutes = require('./routes/index');
 
 var port = process.env.PORT || 3000;
-/* seedDB(); */ //Seed the database
-mongoose.connect(process.env.DATABASEURL);
-/* mongoose.connect('mongodb://dani:17051996dani@ds141720.mlab.com:41720/yelpcamp'); */
+
+mongoose.connect(process.env.DATABASEURL || 'mongodb://localhost/yelp_camp');
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
